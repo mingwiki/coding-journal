@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://journal.zed.ink/2022/02/06/hello-world/</loc>
+    
+    <lastmod>2022-02-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://journal.zed.ink/2022/01/04/2022-01-04-css-position/</loc>
     
     <lastmod>2022-02-06</lastmod>
@@ -30,15 +39,6 @@
   
   <url>
     <loc>https://journal.zed.ink/2022/01/04/2022-01-04-%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</loc>
-    
-    <lastmod>2022-02-06</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://journal.zed.ink/2022/02/06/hello-world/</loc>
     
     <lastmod>2022-02-06</lastmod>
     
