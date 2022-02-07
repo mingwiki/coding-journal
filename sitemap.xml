@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://journal.zed.ink/2022/01/04/2022-01-04-css-position/</loc>
+    <loc>https://journal.zed.ink/tags/index.html</loc>
     
     <lastmod>2022-02-07</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://journal.zed.ink/2022/01/04/2022-01-04-the-shapes-of-css/</loc>
+    <loc>https://journal.zed.ink/fe97a952bd0e/</loc>
     
     <lastmod>2022-02-07</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://journal.zed.ink/2022/01/04/2022-01-04-%E5%AD%A6%E4%B9%A0flexbox/</loc>
+    <loc>https://journal.zed.ink/82e6c710ed48/</loc>
     
     <lastmod>2022-02-07</lastmod>
     
@@ -29,7 +29,16 @@
   </url>
   
   <url>
-    <loc>https://journal.zed.ink/2022/01/04/2022-01-04-%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</loc>
+    <loc>https://journal.zed.ink/074cf19cdcac/</loc>
+    
+    <lastmod>2022-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/630a3fa6e790/</loc>
     
     <lastmod>2022-02-07</lastmod>
     
@@ -46,24 +55,6 @@
     <priority>0.6</priority>
   </url>
   
-  <url>
-    <loc>https://journal.zed.ink/categories/index.html</loc>
-    
-    <lastmod>2022-02-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://journal.zed.ink/tags/index.html</loc>
-    
-    <lastmod>2022-02-07</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
 
   <url>
     <loc>https://journal.zed.ink/</loc>
@@ -72,6 +63,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://journal.zed.ink/tags/CSS/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/%E5%9D%91/</loc>
@@ -95,26 +93,26 @@
   </url>
   
   <url>
-    <loc>https://journal.zed.ink/tags/curl-http-request/</loc>
+    <loc>https://journal.zed.ink/tags/HTTP/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/tags/curl/</loc>
+    <lastmod>2022-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/tags/http-request/</loc>
     <lastmod>2022-02-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
 
-  
-  <url>
-    <loc>https://journal.zed.ink/categories/CSS/</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://journal.zed.ink/categories/HTTP/</loc>
-    <lastmod>2022-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 </urlset>
