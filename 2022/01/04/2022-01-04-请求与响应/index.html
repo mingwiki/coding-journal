@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="付明">
+
+
+    <meta name="subtitle" content="Day Day Up">
+
+
+    <meta name="description" content="Personal Blog">
+
+
+    <meta name="keywords" content="blog, mingwiki, journal">
+
+
+<title>请求与响应 | Coding Journal</title>
+
+
+
+    <link rel="icon" href="/favicon.ico">
+
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/script.js"></script>
+    
+    <script src="/js/tocbot.min.js"></script>
+    
+
+
+
+    
+    
+        
+    
+
+
+<meta name="generator" content="Hexo 6.0.0"><link rel="alternate" href="/atom.xml" title="Coding Journal" type="application/atom+xml">
+</head>
+
+<body>
+    <script>
+        // this function is used to check current theme before page loaded.
+        (() => {
+            const currentTheme = window.localStorage && window.localStorage.getItem('theme') || '';
+            const isDark = currentTheme === 'dark';
+            const pagebody = document.getElementsByTagName('body')[0]
+            if (isDark) {
+                pagebody.classList.add('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Dark"
+            } else {
+                pagebody.classList.remove('dark-theme');
+                // mobile
+                document.getElementById("mobile-toggle-theme").innerText = "· Light"
+            }
+        })();
+    </script>
+
+    <div class="wrapper">
+        <header>
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-header header-logo"><a href="/">Bentham&#39;s Blog</a></div>
+            <div class="menu navbar-right">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+                <input id="switch_default" type="checkbox" class="switch_default">
+                <label for="switch_default" class="toggleBtn"></label>
+            </div>
+        </div>
+    </nav>
+
+    
+    <nav class="navbar-mobile" id="nav-mobile">
+        <div class="container">
+            <div class="navbar-header">
+                <div>
+                    <a href="/">Bentham&#39;s Blog</a><a id="mobile-toggle-theme">·&nbsp;Light</a>
+                </div>
+                <div class="menu-toggle" onclick="mobileBtn()">&#9776; Menu</div>
+            </div>
+            <div class="menu" id="mobile-menu">
+                
+                    <a class="menu-item" href="/archives">Posts</a>
+                
+                    <a class="menu-item" href="/category">Categories</a>
+                
+                    <a class="menu-item" href="/tag">Tags</a>
+                
+                    <a class="menu-item" href="/about">About</a>
+                
+            </div>
+        </div>
+    </nav>
+
+</header>
+<script>
+    var mobileBtn = function f() {
+        var toggleMenu = document.getElementsByClassName("menu-toggle")[0];
+        var mobileMenu = document.getElementById("mobile-menu");
+        if(toggleMenu.classList.contains("active")){
+           toggleMenu.classList.remove("active")
+            mobileMenu.classList.remove("active")
+        }else{
+            toggleMenu.classList.add("active")
+            mobileMenu.classList.add("active")
+        }
+    }
+</script>
+            <div class="main">
+                <div class="container">
+    
+    
+
+    
+    <article class="post-wrap">
+        <header class="post-header">
+            <h1 class="post-title">请求与响应</h1>
+            
+                <div class="post-meta">
+                    
+                        Author: <a itemprop="author" rel="author" href="/">付明</a>
+                    
+
+                    
+                        <span class="post-time">
+                        Date: <a href="#">一月 4, 2022&nbsp;&nbsp;13:28:00</a>
+                        </span>
+                    
+                    
+                </div>
+            
+        </header>
+
+        <div class="post-content">
+            <p>请求示例</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -s -v -H <span class="string">&quot;Frank: xxx&quot;</span> -- <span class="string">&quot;https://www.baidu.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>请求的内容为</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">GET</span> <span class="string">/</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>www.baidu.com</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>curl/7.54.0</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>*/*</span><br><span class="line"><span class="attribute">Frank</span><span class="punctuation">: </span>xxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST -s -v -H <span class="string">&quot;Frank: xxx&quot;</span> -- <span class="string">&quot;https://www.baidu.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>请求的内容为</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>www.baidu.com</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>curl/7.54.0</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>*/*</span><br><span class="line"><span class="attribute">Frank</span><span class="punctuation">: </span>xxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST -d <span class="string">&quot;1234567890&quot;</span> -s -v -H <span class="string">&quot;Frank: xxx&quot;</span> -- <span class="string">&quot;https://www.baidu.com&quot;</span></span><br></pre></td></tr></table></figure>
+<p>请求的内容为</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">POST</span> <span class="string">/</span> <span class="meta">HTTP/1.1</span></span><br><span class="line"><span class="attribute">Host</span><span class="punctuation">: </span>www.baidu.com</span><br><span class="line"><span class="attribute">User-Agent</span><span class="punctuation">: </span>curl/7.54.0</span><br><span class="line"><span class="attribute">Accept</span><span class="punctuation">: </span>*/*</span><br><span class="line"><span class="attribute">Frank</span><span class="punctuation">: </span>xxx</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>10</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>application/x-www-form-urlencoded</span><br><span class="line"></span><br><span class="line"><span class="language-dns"><span class="number">1234567890</span></span></span><br></pre></td></tr></table></figure>
+<p>请求的格式</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">1 </span>动词路径协议/版本</span><br><span class="line"><span class="symbol">2 </span>Key1: value1</span><br><span class="line"><span class="symbol">2 </span>Key2: value2</span><br><span class="line"><span class="symbol">2 </span>Key3: value3</span><br><span class="line"><span class="symbol">2 </span>Content-Type: application/x-www-form-urlencoded</span><br><span class="line"><span class="symbol">2 </span>Host: www.baidu.<span class="keyword">com</span></span><br><span class="line"><span class="symbol">2 </span>User-Agent: curl/<span class="number">7.54</span>.<span class="number">0</span></span><br><span class="line"><span class="symbol">3 </span></span><br><span class="line"><span class="symbol">4 </span>要上传的数据</span><br></pre></td></tr></table></figure>
+<ol>
+<li>请求最多包含四部分，最少包含三部分。（也就是说第四部分可以为空）</li>
+<li>第三部分永远都是一个回车（\n）</li>
+<li>动词有 GET POST PUT PATCH DELETE HEAD OPTIONS 等</li>
+<li>这里的路径包括「查询参数」，但不包括「锚点」</li>
+<li>如果你没有写路径，那么路径默认为 /</li>
+<li>第 2 部分中的 Content-Type 标注了第 4 部分的格式</li>
+</ol>
+<p>响应示例上面三个请求示例，前两个请求对应的响应分别为</p>
+<figure class="highlight http"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">HTTP/1.1</span> <span class="number">200</span> OK</span><br><span class="line"><span class="attribute">Accept-Ranges</span><span class="punctuation">: </span>bytes</span><br><span class="line"><span class="attribute">Cache-Control</span><span class="punctuation">: </span>private, no-cache, no-store, proxy-revalidate, no-transform</span><br><span class="line"><span class="attribute">Connection</span><span class="punctuation">: </span>Keep-Alive</span><br><span class="line"><span class="attribute">Content-Length</span><span class="punctuation">: </span>2443</span><br><span class="line"><span class="attribute">Content-Type</span><span class="punctuation">: </span>text/html</span><br><span class="line"><span class="attribute">Date</span><span class="punctuation">: </span>Tue, 10 Oct 2017 09:14:05 GMT</span><br><span class="line"><span class="attribute">Etag</span><span class="punctuation">: </span>&quot;5886041d-98b&quot;</span><br><span class="line"><span class="attribute">Last-Modified</span><span class="punctuation">: </span>Mon, 23 Jan 2017 13:24:45 GMT</span><br><span class="line"><span class="attribute">Pragma</span><span class="punctuation">: </span>no-cache</span><br><span class="line"><span class="attribute">Server</span><span class="punctuation">: </span>bfe/1.0.8.18</span><br><span class="line"><span class="attribute">Set-Cookie</span><span class="punctuation">: </span>BDORZ=27315; max-age=86400; domain=.baidu.com; path=/</span><br><span class="line"></span><br><span class="line"><span class="language-xml"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="comment">&lt;!--STATUS OK--&gt;</span><span class="tag">&lt;<span class="name">html</span>&gt;</span> <span class="tag">&lt;<span class="name">head</span>&gt;</span> 后面太长，省略了……</span></span><br><span class="line"><span class="language-xml">HTTP/1.1 302 Found</span></span><br><span class="line"><span class="language-xml">Connection: Keep-Alive</span></span><br><span class="line"><span class="language-xml">Content-Length: 17931</span></span><br><span class="line"><span class="language-xml">Content-Type: text/html</span></span><br><span class="line"><span class="language-xml">Date: Tue, 10 Oct 2017 09:19:47 GMT</span></span><br><span class="line"><span class="language-xml">Etag: &quot;54d9749e-460b&quot;</span></span><br><span class="line"><span class="language-xml">Server: bfe/1.0.8.18</span></span><br><span class="line"><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span></span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;content-type&quot;</span> <span class="attr">content</span>=<span class="string">&quot;text/html;charset=utf-8&quot;</span>&gt;</span> 后面太长，省略了……</span></span><br></pre></td></tr></table></figure>
+<ol>
+<li>GET 请求和 POST 请求对应的响应可以一样，也可以不一样</li>
+<li>响应的第四部分可以很长很长很长</li>
+</ol>
+<p>响应的格式</p>
+<figure class="highlight ada"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span> 协议/版本号状态码状态解释</span><br><span class="line"><span class="number">2</span> Key1: value1</span><br><span class="line"><span class="number">2</span> Key2: value2</span><br><span class="line"><span class="number">2</span> Content-Length: <span class="number">17931</span></span><br><span class="line"><span class="number">2</span> Content-<span class="keyword">Type</span>: text/html</span><br><span class="line"><span class="number">3</span></span><br><span class="line"><span class="number">4</span> 要下载的内容</span><br><span class="line">状态码要背，是服务器对浏览器说的话</span><br><span class="line"><span class="number">1</span>xx 不常用</span><br><span class="line"><span class="number">2</span>xx 表示成功</span><br><span class="line"><span class="number">3</span>xx 表示滚吧</span><br><span class="line"><span class="number">4</span>xx 表示你丫错了</span><br><span class="line"><span class="number">5</span>xx 表示好吧，我错了</span><br><span class="line">状态解释没什么用</span><br><span class="line">第 <span class="number">2</span> 部分中的 Content-<span class="keyword">Type</span> <span class="type">标注了第 </span><span class="number">4</span> 部分的格式</span><br><span class="line">第 <span class="number">2</span> 部分中的 Content-<span class="keyword">Type</span> <span class="type">遵循 </span>MIME 规范</span><br></pre></td></tr></table></figure>
+
+        </div>
+
+        
+            <section class="post-copyright">
+                
+                    <p class="copyright-item">
+                        <span>Author:</span>
+                        <span>付明</span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>Permalink:</span>
+                        <span><a href="https://journal.zed.ink/2022/01/04/2022-01-04-%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/">https://journal.zed.ink/2022/01/04/2022-01-04-%E8%AF%B7%E6%B1%82%E4%B8%8E%E5%93%8D%E5%BA%94/</a></span>
+                    </p>
+                
+                
+                    <p class="copyright-item">
+                        <span>License:</span>
+                        <span>Copyright (c) 2019 <a target="_blank" rel="noopener" href="http://creativecommons.org/licenses/by-nc/4.0/">CC-BY-NC-4.0</a> LICENSE</span>
+                    </p>
+                
+                
+                     <p class="copyright-item">
+                         <span>Slogan:</span>
+                         <span>Do you believe in <strong>DESTINY</strong>?</span>
+                     </p>
+                
+
+            </section>
+        
+        <section class="post-tags">
+            <div>
+                <span>Tag(s):</span>
+                <span class="tag">
+                    
+                </span>
+            </div>
+            <div>
+                <a href="javascript:window.history.back();">back</a>
+                <span>· </span>
+                <a href="/">home</a>
+            </div>
+        </section>
+        <section class="post-nav">
+            
+                <a class="prev" rel="prev" href="/2022/01/04/2022-01-04-%E5%AD%A6%E4%B9%A0flexbox/">学习Flexbox</a>
+            
+            
+            <a class="next" rel="next" href="/2022/01/04/2022-01-04-css-position/">CSS position</a>
+            
+        </section>
+
+
+    </article>
+</div>
+
+            </div>
+            <footer id="footer" class="footer">
+    <div class="copyright">
+        <span>© 付明 | Powered by <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/Siricee/hexo-theme-Chic" target="_blank">Chic</a></span>
+    </div>
+</footer>
+
+    </div>
+</body>
+
+</html>
