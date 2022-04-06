@@ -2,45 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://journal.zed.ink/074cf19cdcac/</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://journal.zed.ink/630a3fa6e790/</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://journal.zed.ink/about/index.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://journal.zed.ink/tags/index.html</loc>
-    
-    <lastmod>2022-03-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://journal.zed.ink/fe97a952bd0e/</loc>
     
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -49,7 +13,43 @@
   <url>
     <loc>https://journal.zed.ink/82e6c710ed48/</loc>
     
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/074cf19cdcac/</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/630a3fa6e790/</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/about/index.html</loc>
+    
+    <lastmod>2022-04-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://journal.zed.ink/tags/index.html</loc>
+    
+    <lastmod>2022-04-06</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +58,7 @@
 
   <url>
     <loc>https://journal.zed.ink/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -66,49 +66,49 @@
   
   <url>
     <loc>https://journal.zed.ink/tags/CSS/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/%E5%9D%91/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/CSS%E7%94%BB%E5%9B%BE/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/%E8%83%8C/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/HTTP/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/curl/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://journal.zed.ink/tags/http-request/</loc>
-    <lastmod>2022-03-30</lastmod>
+    <lastmod>2022-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
